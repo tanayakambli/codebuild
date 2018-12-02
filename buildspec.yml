@@ -5,6 +5,7 @@ phases:
     commands:
       - echo running install phase
       - npm i npm@latest -g
+      - npm install
       - pip install --upgrade awscli
   pre_build:
     commands:
