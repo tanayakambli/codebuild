@@ -10,6 +10,7 @@ phases:
       - npm install
   build:
     commands:
+      - sh -ac '. ./.env.development
       - npm run build
   post_build:
     commands:
