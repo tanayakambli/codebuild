@@ -17,5 +17,5 @@ phases:
   post_build:
     commands:
       - echo running post build phase
-      - aws s3 sync build/ --delete s3://codepipeline-eu-west-1-405557816860 
+      - aws s3 sync ./build s3://codepipeline-eu-west-1-405557816860 
 
