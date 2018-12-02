@@ -1,0 +1,18 @@
+version: 0.2
+
+phases:
+  install: 
+    commands:
+      - echo running install phase
+  pre_build:
+    commands:
+      - echo running pre build phase
+  build:
+    commands:
+      - echo running build phase
+      - npm run build
+  post_build:
+    commands:
+      - echo running post build phase
+      - aws s3 sync build/ --delete s3://codepipeline-eu-west-1-405557816860 
+
