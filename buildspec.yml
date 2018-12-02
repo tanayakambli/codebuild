@@ -3,21 +3,15 @@ version: 0.2
 phases:
   install: 
     commands:
-      - echo running install phase
-      - echo ENVIRONMENT => $ENVIRONMENT
-      - echo S3_BUCKET => $S3_BUCKET
       - npm i npm@latest -g
       - pip install --upgrade awscli
   pre_build:
     commands:
-      - echo running pre build phase
       - npm install
   build:
     commands:
-      - echo running build phase
       - npm run build
   post_build:
     commands:
-      - echo running post build phase
-      - aws s3 sync ./build s3://codepipeline-eu-west-1-405557816860 
+      - aws s3 sync ./build $S3_BUCKET 
 
