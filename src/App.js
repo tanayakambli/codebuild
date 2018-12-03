@@ -11,6 +11,9 @@ class App extends Component {
           <p>
             Haseeb <i><code>"hzburki"</code></i> Burki
           </p>
+          <p>
+            Environment: <i><code>"{process.env.REACT_APP_ENVIRONMENT}"</code></i> 
+          </p>
         </header>
       </div>
     );
