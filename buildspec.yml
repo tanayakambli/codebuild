@@ -11,8 +11,7 @@ phases:
       - npm install
   build:
     commands:
-      - "sh -ac . ./.env.staging"
-      - npm run build
+      - npm run build:stage
   post_build:
     commands:
       - aws s3 sync ./build $S3_BUCKET 
