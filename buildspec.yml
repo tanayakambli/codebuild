@@ -5,13 +5,13 @@ phases:
     commands:
       - npm i npm@latest -g
       - pip install --upgrade pip
+      - pip install --upgrade awscli
   pre_build:
     commands:
-      - pip install --upgrade awscli
       - npm install
   build:
     commands:
-      - sh -ac . ./.env.staging
+      - "sh -ac . ./.env.staging"
       - npm run build
   post_build:
     commands:
