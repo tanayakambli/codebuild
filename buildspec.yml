@@ -4,9 +4,10 @@ phases:
   install: 
     commands:
       - npm i npm@latest -g
-      - pip install --upgrade awscli
+      - pip install --upgrade pip
   pre_build:
     commands:
+      - pip install --upgrade awscli
       - npm install
   build:
     commands:
