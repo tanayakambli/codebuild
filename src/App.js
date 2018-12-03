@@ -12,7 +12,7 @@ class App extends Component {
             Haseeb <i><code>"hzburki"</code></i> Burki
           </p>
           <p>
-            Environment: <i><code>"{process.env.REACT_APP_ENVIRONMENT}"</code></i> 
+            Environment: <i><code>"{process.env.REACT_APP_API_ENDPOINT}"</code></i> 
           </p>
         </header>
       </div>
