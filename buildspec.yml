@@ -11,8 +11,8 @@ phases:
       - npm install
   build:
     commands:
-      - npm run build:$ENVIRONMENT
+      - npm run build:dev
   post_build:
     commands:
-      - aws s3 sync ./build $S3_BUCKET 
+      - aws s3 sync ./build staticwwebsite25997two
 
