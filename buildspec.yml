@@ -14,7 +14,7 @@ phases:
       - npm run build:dev
   post_build:
     commands:
-      - aws s3 sync ./build staticwwebsite25997two --content-encoding gzip --debug 
+      - aws s3 sync ./build s3://staticwwebsite25997two --content-encoding gzip --debug 
       - aws configure set preview.cloudfront true
-      - aws cloudfront create-invalidation --distribution-id $CLOUDFRONT_ID --paths "/*"
+      - aws cloudfront create-invalidation --distribution-id E1KGSJUWQNOCK5 --paths "/*"
 
